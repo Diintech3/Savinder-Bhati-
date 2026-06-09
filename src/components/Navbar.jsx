@@ -36,13 +36,13 @@ export default function Navbar() {
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6, ease: 'easeOut' }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 pt-[env(safe-area-inset-top,0px)] ${
         scrolled
           ? 'bg-white/95 backdrop-blur-xl shadow-sm shadow-black/8 border-b border-gray-100'
           : 'bg-transparent'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
 
           {/* Logo */}
@@ -102,11 +102,12 @@ export default function Navbar() {
 
             <button
               onClick={() => setMenuOpen(!menuOpen)}
-              className={`lg:hidden p-2 rounded-lg transition-colors cursor-pointer ${
+              aria-label={menuOpen ? 'Close menu' : 'Open menu'}
+              className={`lg:hidden p-3 -mr-1 rounded-lg transition-colors cursor-pointer min-w-[44px] min-h-[44px] flex items-center justify-center ${
                 scrolled ? 'text-[#003366]' : 'text-white'
               }`}
             >
-              {menuOpen ? <HiX size={22} /> : <HiMenuAlt3 size={22} />}
+              {menuOpen ? <HiX size={24} /> : <HiMenuAlt3 size={24} />}
             </button>
           </div>
         </div>

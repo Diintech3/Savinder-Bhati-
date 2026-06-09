@@ -56,20 +56,20 @@ export default function About() {
   const inView = useInView(ref, { once: true, margin: '-80px' })
 
   return (
-    <section id="about" className="py-24 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="about" className="py-16 sm:py-24 bg-white">
+      <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
 
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-12 sm:mb-16"
         >
           <span className="inline-block bg-[#FF9933]/10 border border-[#FF9933]/30 text-[#FF9933] text-xs font-bold font-[Poppins] tracking-widest uppercase px-5 py-2 rounded-full mb-4">
             About
           </span>
-          <h2 className="text-4xl lg:text-5xl font-black font-[Poppins] text-[#003366]">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black font-[Poppins] text-[#003366]">
             Who is{' '}
             <span className="bg-gradient-to-r from-[#FF9933] to-[#D4AF37] bg-clip-text text-transparent">
               Savinder Bhati?
@@ -81,7 +81,7 @@ export default function About() {
         </motion.div>
 
         {/* Bio + Values */}
-        <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
+        <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-start mb-16 sm:mb-20">
 
           {/* Bio Card */}
           <motion.div
@@ -120,7 +120,7 @@ export default function About() {
           </motion.div>
 
           {/* Values Grid */}
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 min-[420px]:grid-cols-2 gap-3 sm:gap-4">
             {values.map((v, i) => (
               <motion.div
                 key={i}
@@ -130,20 +130,20 @@ export default function About() {
                 viewport={{ once: true }}
                 variants={fadeUp}
                 whileHover={{ y: -5 }}
-                className="bg-gray-50 border border-gray-100 rounded-2xl p-4 hover:border-[#FF9933]/30 hover:shadow-xl transition-all duration-300"
+                className="h-full flex flex-col bg-gray-50 border border-gray-100 rounded-2xl p-4 sm:p-5 hover:border-[#FF9933]/30 hover:shadow-xl transition-all duration-300"
               >
-                <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#003366] to-[#0055AA] flex items-center justify-center text-white mb-3 shadow-lg">
+                <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#003366] to-[#0055AA] flex items-center justify-center text-white mb-3 shadow-lg shrink-0">
                   <v.Icon size={18} />
                 </div>
-                <p className="font-bold font-[Poppins] text-[#003366] text-sm mb-1">{v.title}</p>
-                <p className="text-gray-500 text-xs font-[Inter] leading-relaxed">{v.desc}</p>
+                <p className="font-bold font-[Poppins] text-[#003366] text-sm mb-1.5 leading-snug">{v.title}</p>
+                <p className="text-gray-500 text-xs sm:text-sm font-[Inter] leading-relaxed flex-1">{v.desc}</p>
               </motion.div>
             ))}
           </div>
         </div>
 
         {/* Stats */}
-        <div ref={ref} className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5">
+        <div ref={ref} className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-5">
           {stats.map((s, i) => (
             <motion.div
               key={i}
@@ -152,7 +152,7 @@ export default function About() {
               whileInView="visible"
               viewport={{ once: true }}
               variants={fadeUp}
-              className="bg-gradient-to-br from-[#003366] to-[#001a33] rounded-2xl p-6 text-center shadow-xl"
+              className="bg-gradient-to-br from-[#003366] to-[#001a33] rounded-2xl p-4 sm:p-6 text-center shadow-xl"
             >
               <AnimatedNumber
                 value={s.value}

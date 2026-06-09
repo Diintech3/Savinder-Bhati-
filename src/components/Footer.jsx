@@ -14,8 +14,8 @@ export default function Footer() {
   const scrollTo = (id) => document.querySelector(`#${id.toLowerCase().replace(' ', '')}`)?.scrollIntoView({ behavior: 'smooth' })
 
   return (
-    <footer className="bg-gradient-to-b from-[#001a33] to-[#000D1A] text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <footer className="bg-gradient-to-b from-[#001a33] to-[#000D1A] text-white pb-[env(safe-area-inset-bottom,0px)]">
+      <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 py-12 sm:py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
 
           {/* Brand */}
@@ -95,7 +95,7 @@ export default function Footer() {
 
       {/* Bottom Bar */}
       <div className="border-t border-white/5">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
+        <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="text-white/40 text-xs font-[Inter]">
             © 2024 Savinder Bhati Murshadpur. All rights reserved.
           </p>

@@ -38,7 +38,7 @@ export default function App() {
   }, [])
 
   return (
-    <div>
+    <div className="overflow-x-hidden">
 
       {/* Page Loader */}
       <AnimatePresence>
@@ -101,8 +101,11 @@ export default function App() {
         animate={{ scale: 1 }}
         transition={{ delay: 3, type: 'spring', stiffness: 200 }}
         whileHover={{ scale: 1.1 }}
-        className="fixed bottom-20 right-5 z-50 w-13 h-13 bg-green-500 text-white rounded-full flex items-center justify-center shadow-xl shadow-green-500/40 cursor-pointer"
-        style={{ width: 52, height: 52 }}
+        className={`fixed right-4 sm:right-5 z-50 bg-green-500 text-white rounded-full flex items-center justify-center shadow-xl shadow-green-500/40 cursor-pointer transition-all duration-300 ${
+          showTop ? 'bottom-[5.5rem] sm:bottom-24' : 'bottom-5 sm:bottom-6'
+        }`}
+        style={{ width: 52, height: 52, marginBottom: 'env(safe-area-inset-bottom, 0px)' }}
+        aria-label="Chat on WhatsApp"
       >
         <FaWhatsapp size={26} />
       </motion.a>
@@ -115,7 +118,9 @@ export default function App() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 20 }}
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-            className="fixed bottom-5 right-5 z-50 w-11 h-11 bg-gradient-to-br from-[#003366] to-[#0055AA] text-white rounded-full flex items-center justify-center shadow-xl shadow-blue-900/40 cursor-pointer"
+            className="fixed bottom-5 sm:bottom-6 right-4 sm:right-5 z-50 w-11 h-11 bg-gradient-to-br from-[#003366] to-[#0055AA] text-white rounded-full flex items-center justify-center shadow-xl shadow-blue-900/40 cursor-pointer"
+            style={{ marginBottom: 'env(safe-area-inset-bottom, 0px)' }}
+            aria-label="Back to top"
           >
             <FaArrowUp size={16} />
           </motion.button>

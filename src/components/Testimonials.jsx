@@ -52,12 +52,12 @@ export default function Testimonials() {
   const next = () => setCurrent((p) => (p === testimonials.length - 1 ? 0 : p + 1))
 
   return (
-    <section id="testimonials" className="py-24 bg-gradient-to-br from-[#001a33] via-[#003366] to-[#001a33] relative overflow-hidden">
+    <section id="testimonials" className="py-16 sm:py-24 bg-gradient-to-br from-[#001a33] via-[#003366] to-[#001a33] relative overflow-hidden">
       {/* Background Blur */}
       <div className="absolute top-0 left-0 w-80 h-80 rounded-full bg-[#FF9933]/10 blur-[100px]" />
       <div className="absolute bottom-0 right-0 w-80 h-80 rounded-full bg-[#D4AF37]/10 blur-[100px]" />
 
-      <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative z-10 max-w-4xl mx-auto px-5 sm:px-6 lg:px-8">
 
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -68,7 +68,7 @@ export default function Testimonials() {
           <span className="inline-block bg-white/10 border border-[#FF9933]/30 text-[#FF9933] text-xs font-bold font-[Poppins] tracking-widest uppercase px-5 py-2 rounded-full mb-4">
             Testimonials
           </span>
-          <h2 className="text-4xl lg:text-5xl font-black font-[Poppins] text-white">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black font-[Poppins] text-white">
             What People{' '}
             <span className="bg-gradient-to-r from-[#FF9933] to-[#D4AF37] bg-clip-text text-transparent">
               Say

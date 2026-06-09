@@ -15,7 +15,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative w-full min-h-screen flex items-center overflow-hidden"
+      className="relative w-full min-h-[100dvh] flex items-center overflow-x-hidden"
     >
       {/* Background Video */}
       <video
@@ -45,15 +45,15 @@ export default function Hero() {
         }}
       />
 
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-16">
-        <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 pt-24 pb-28 sm:pb-20 lg:pb-16">
+        <div className="grid lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-16 items-center">
 
           {/* ── Left Content ── */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, ease: 'easeOut' }}
-            className="flex flex-col gap-5 order-2 lg:order-1"
+            className="flex flex-col gap-4 sm:gap-5 order-2 lg:order-1 min-w-0 w-full"
           >
             {/* Badge */}
             <motion.div
@@ -75,11 +75,11 @@ export default function Hero() {
               transition={{ delay: 0.3 }}
             >
               <h1 className="font-black leading-[1.1]" style={{ fontFamily: 'Playfair Display, serif' }}>
-                <span className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl block text-white">Savinder</span>
-                <span className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl block bg-gradient-to-r from-[#FF9933] to-[#D4AF37] bg-clip-text text-transparent">
+                <span className="text-3xl sm:text-5xl lg:text-6xl xl:text-7xl block text-white">Savinder</span>
+                <span className="text-3xl sm:text-5xl lg:text-6xl xl:text-7xl block bg-gradient-to-r from-[#FF9933] to-[#D4AF37] bg-clip-text text-transparent">
                   Bhati
                 </span>
-                <span className="text-xl sm:text-2xl lg:text-2xl block text-white/50 font-semibold mt-2 tracking-widest uppercase" style={{ fontFamily: 'Poppins, sans-serif' }}>
+                <span className="text-lg sm:text-2xl lg:text-2xl block text-white/50 font-semibold mt-2 tracking-widest uppercase" style={{ fontFamily: 'Poppins, sans-serif' }}>
                   Murshadpur
                 </span>
               </h1>
@@ -100,14 +100,15 @@ export default function Hero() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.5 }}
-              className="text-base lg:text-lg font-semibold text-[#D4AF37] h-7" style={{ fontFamily: 'Poppins, sans-serif' }}
+              className="text-sm sm:text-base lg:text-lg font-semibold text-[#D4AF37] min-h-[1.75rem] w-full min-w-0 break-words"
+              style={{ fontFamily: 'Poppins, sans-serif' }}
             >
               <TypeAnimation
                 sequence={[
                   'Social Leader', 2000,
                   'Community Visionary', 2000,
                   'Public Representative', 2000,
-                  'Serving Society With Dedication', 2500,
+                  'Serving With Dedication', 2500,
                 ]}
                 wrapper="span"
                 repeat={Infinity}
@@ -120,13 +121,13 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6 }}
-              className="flex flex-wrap gap-3 mt-1"
+              className="flex flex-col sm:flex-row sm:flex-wrap gap-3 mt-1 w-full"
             >
               <motion.button
                 whileHover={{ scale: 1.04, y: -2 }}
                 whileTap={{ scale: 0.97 }}
                 onClick={() => document.querySelector('#journey')?.scrollIntoView({ behavior: 'smooth' })}
-                className="bg-[#003366] hover:bg-[#004080] text-white px-7 py-3 rounded-full font-semibold text-sm shadow-lg shadow-blue-900/40 cursor-pointer transition-colors" style={{ fontFamily: 'Poppins, sans-serif' }}
+                className="w-full sm:w-auto bg-[#003366] hover:bg-[#004080] text-white px-7 py-3.5 sm:py-3 rounded-full font-semibold text-sm shadow-lg shadow-blue-900/40 cursor-pointer transition-colors text-center" style={{ fontFamily: 'Poppins, sans-serif' }}
               >
                 View Journey
               </motion.button>
@@ -134,14 +135,14 @@ export default function Hero() {
                 whileHover={{ scale: 1.04, y: -2 }}
                 whileTap={{ scale: 0.97 }}
                 onClick={() => document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })}
-                className="bg-[#FF9933] hover:bg-[#e07000] text-white px-7 py-3 rounded-full font-semibold text-sm shadow-lg shadow-orange-500/30 cursor-pointer transition-colors" style={{ fontFamily: 'Poppins, sans-serif' }}
+                className="w-full sm:w-auto bg-[#FF9933] hover:bg-[#e07000] text-white px-7 py-3.5 sm:py-3 rounded-full font-semibold text-sm shadow-lg shadow-orange-500/30 cursor-pointer transition-colors text-center" style={{ fontFamily: 'Poppins, sans-serif' }}
               >
                 Connect Now
               </motion.button>
               <motion.button
                 whileHover={{ scale: 1.04 }}
                 whileTap={{ scale: 0.97 }}
-                className="flex items-center gap-2 border border-white/25 text-white px-5 py-3 rounded-full font-semibold text-sm cursor-pointer hover:bg-white/10 transition-colors" style={{ fontFamily: 'Poppins, sans-serif' }}
+                className="w-full sm:w-auto flex items-center justify-center gap-2 border border-white/25 text-white px-5 py-3.5 sm:py-3 rounded-full font-semibold text-sm cursor-pointer hover:bg-white/10 transition-colors" style={{ fontFamily: 'Poppins, sans-serif' }}
               >
                 <span className="w-7 h-7 rounded-full bg-[#FF9933] flex items-center justify-center shrink-0">
                   <FaPlay size={9} />
@@ -155,22 +156,25 @@ export default function Hero() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.8 }}
-              className="flex items-center gap-3 pt-1"
+              className="flex flex-wrap items-center gap-3 pt-1"
             >
-              <span className="text-white/40 text-xs uppercase tracking-widest" style={{ fontFamily: 'Inter, sans-serif' }}>Follow</span>
-              <div className="w-6 h-px bg-white/15" />
-              {socialLinks.map(({ Icon, href, bg }, i) => (
-                <motion.a
-                  key={i}
-                  href={href}
-                  target="_blank"
-                  rel="noreferrer"
-                  whileHover={{ scale: 1.2, y: -3 }}
-                  className={`w-9 h-9 rounded-full ${bg} flex items-center justify-center text-white shadow-md cursor-pointer`}
-                >
-                  <Icon size={16} />
-                </motion.a>
-              ))}
+              <span className="text-white/40 text-xs uppercase tracking-widest shrink-0" style={{ fontFamily: 'Inter, sans-serif' }}>Follow</span>
+              <div className="hidden sm:block w-6 h-px bg-white/15 shrink-0" />
+              <div className="flex items-center gap-2.5 sm:gap-3">
+                {socialLinks.map(({ Icon, href, bg }, i) => (
+                  <motion.a
+                    key={i}
+                    href={href}
+                    target="_blank"
+                    rel="noreferrer"
+                    whileHover={{ scale: 1.2, y: -3 }}
+                    className={`w-11 h-11 sm:w-9 sm:h-9 rounded-full ${bg} flex items-center justify-center text-white shadow-md cursor-pointer`}
+                    aria-label="Social link"
+                  >
+                    <Icon size={16} />
+                  </motion.a>
+                ))}
+              </div>
             </motion.div>
           </motion.div>
 
@@ -179,22 +183,22 @@ export default function Hero() {
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="flex justify-center lg:justify-end relative order-1 lg:order-2"
+            className="flex justify-center lg:justify-end relative order-1 lg:order-2 min-w-0 w-full py-2 sm:py-0"
           >
-            <div className="relative flex items-center justify-center">
+            <div className="relative flex items-center justify-center w-[220px] h-[220px] sm:w-[260px] sm:h-[260px] lg:w-[320px] lg:h-[320px] mx-auto">
               {/* Outer spinning ring */}
-              <div className="absolute w-72 h-72 lg:w-80 lg:h-80 rounded-full border border-[#FF9933]/25 animate-[spin_20s_linear_infinite]" />
+              <div className="absolute inset-0 rounded-full border border-[#FF9933]/25 animate-[spin_20s_linear_infinite]" />
               {/* Inner spinning ring */}
-              <div className="absolute w-64 h-64 lg:w-72 lg:h-72 rounded-full border border-[#D4AF37]/20 animate-[spin_14s_linear_infinite_reverse]" />
+              <div className="absolute inset-[12px] sm:inset-[14px] lg:inset-[16px] rounded-full border border-[#D4AF37]/20 animate-[spin_14s_linear_infinite_reverse]" />
 
               {/* Glow behind circle */}
-              <div className="absolute w-56 h-56 lg:w-64 lg:h-64 rounded-full bg-[#FF9933]/10 blur-2xl" />
+              <div className="absolute inset-[20px] sm:inset-[24px] rounded-full bg-[#FF9933]/10 blur-2xl" />
 
               {/* Circle image */}
               <motion.div
                 animate={{ y: [0, -8, 0] }}
                 transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
-                className="relative z-10 w-56 h-56 lg:w-64 lg:h-64 rounded-full overflow-hidden border-4 border-[#FF9933]/60 shadow-2xl shadow-[#FF9933]/20"
+                className="relative z-10 w-[180px] h-[180px] sm:w-[220px] sm:h-[220px] lg:w-64 lg:h-64 rounded-full overflow-hidden border-4 border-[#FF9933]/60 shadow-2xl shadow-[#FF9933]/20"
               >
                 <img
                   src="/Savi image.png"
@@ -208,10 +212,10 @@ export default function Hero() {
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 1.1 }}
-                className="absolute -bottom-2 -left-10 bg-[#001830]/90 backdrop-blur-xl border border-[#FF9933]/30 rounded-2xl px-4 py-2.5 shadow-xl z-20"
+                className="absolute -bottom-1 -left-2 sm:-bottom-2 sm:-left-10 bg-[#001830]/90 backdrop-blur-xl border border-[#FF9933]/30 rounded-xl sm:rounded-2xl px-3 py-2 sm:px-4 sm:py-2.5 shadow-xl z-20"
               >
-                <p className="text-[#D4AF37] font-black text-xl leading-none" style={{ fontFamily: 'Poppins, sans-serif' }}>15+</p>
-                <p className="text-white/60 text-[11px] mt-0.5" style={{ fontFamily: 'Inter, sans-serif' }}>Years of Service</p>
+                <p className="text-[#D4AF37] font-black text-lg sm:text-xl leading-none" style={{ fontFamily: 'Poppins, sans-serif' }}>15+</p>
+                <p className="text-white/60 text-[10px] sm:text-[11px] mt-0.5 whitespace-nowrap" style={{ fontFamily: 'Inter, sans-serif' }}>Years of Service</p>
               </motion.div>
 
               {/* Badge — top right */}
@@ -219,10 +223,10 @@ export default function Hero() {
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 1.3 }}
-                className="absolute -top-2 -right-10 bg-[#001830]/90 backdrop-blur-xl border border-[#FF9933]/30 rounded-2xl px-4 py-2.5 shadow-xl z-20"
+                className="absolute -top-1 -right-2 sm:-top-2 sm:-right-10 bg-[#001830]/90 backdrop-blur-xl border border-[#FF9933]/30 rounded-xl sm:rounded-2xl px-3 py-2 sm:px-4 sm:py-2.5 shadow-xl z-20"
               >
-                <p className="text-[#FF9933] font-black text-xl leading-none" style={{ fontFamily: 'Poppins, sans-serif' }}>50K+</p>
-                <p className="text-white/60 text-[11px] mt-0.5" style={{ fontFamily: 'Inter, sans-serif' }}>People Connected</p>
+                <p className="text-[#FF9933] font-black text-lg sm:text-xl leading-none" style={{ fontFamily: 'Poppins, sans-serif' }}>50K+</p>
+                <p className="text-white/60 text-[10px] sm:text-[11px] mt-0.5 whitespace-nowrap" style={{ fontFamily: 'Inter, sans-serif' }}>People Connected</p>
               </motion.div>
             </div>
           </motion.div>
@@ -235,7 +239,7 @@ export default function Hero() {
         animate={{ y: [0, 8, 0] }}
         transition={{ duration: 2, repeat: Infinity }}
         onClick={scrollToAbout}
-        className="absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1.5 cursor-pointer group"
+        className="absolute bottom-4 sm:bottom-6 left-1/2 -translate-x-1/2 hidden sm:flex flex-col items-center gap-1.5 cursor-pointer group"
       >
         <span className="text-white/40 text-[10px] uppercase tracking-widest group-hover:text-white/70 transition-colors" style={{ fontFamily: 'Inter, sans-serif' }}>
           Scroll

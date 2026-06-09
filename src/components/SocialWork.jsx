@@ -14,19 +14,19 @@ const works = [
 
 export default function SocialWork() {
   return (
-    <section id="socialwork" className="py-24 bg-white dark:bg-[#0A0F1E]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="socialwork" className="py-16 sm:py-24 bg-white dark:bg-[#0A0F1E]">
+      <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
 
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-12 sm:mb-16"
         >
           <span className="inline-block bg-[#FF9933]/10 border border-[#FF9933]/30 text-[#FF9933] text-xs font-bold font-[Poppins] tracking-widest uppercase px-5 py-2 rounded-full mb-4">
             Social Work
           </span>
-          <h2 className="text-4xl lg:text-5xl font-black font-[Poppins] text-[#003366] dark:text-white">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black font-[Poppins] text-[#003366] dark:text-white">
             Serving{' '}
             <span className="bg-gradient-to-r from-[#FF9933] to-[#D4AF37] bg-clip-text text-transparent">
               Society
@@ -37,7 +37,7 @@ export default function SocialWork() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 pb-4">
           {works.map((w, i) => (
             <motion.div
               key={i}
@@ -46,16 +46,16 @@ export default function SocialWork() {
               viewport={{ once: true, margin: '-40px' }}
               transition={{ delay: i * 0.06, duration: 0.4 }}
               whileHover={{ y: -8 }}
-              className={`${w.color} border rounded-2xl p-6 text-center transition-all duration-300 hover:shadow-xl cursor-default`}
+              className={`${w.color} border rounded-2xl p-5 sm:p-6 h-full flex flex-col text-center transition-all duration-300 hover:shadow-xl cursor-default`}
             >
               <motion.div
                 whileHover={{ rotate: 10, scale: 1.1 }}
-                className={`w-16 h-16 rounded-2xl ${w.iconBg} flex items-center justify-center text-white mx-auto mb-4 shadow-lg`}
+                className={`w-14 h-14 sm:w-16 sm:h-16 rounded-2xl ${w.iconBg} flex items-center justify-center text-white mx-auto mb-4 shadow-lg shrink-0`}
               >
                 {w.icon}
               </motion.div>
-              <h3 className="font-bold font-[Poppins] text-[#003366] dark:text-white text-base mb-2">{w.title}</h3>
-              <p className="text-gray-500 dark:text-gray-400 text-sm font-[Inter] leading-relaxed">{w.desc}</p>
+              <h3 className="font-bold font-[Poppins] text-[#003366] dark:text-white text-base mb-2 leading-snug">{w.title}</h3>
+              <p className="text-gray-500 dark:text-gray-400 text-sm font-[Inter] leading-relaxed flex-1">{w.desc}</p>
             </motion.div>
           ))}
         </div>

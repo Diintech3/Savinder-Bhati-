@@ -48,8 +48,8 @@ const timeline = [
 
 export default function Journey() {
   return (
-    <section id="journey" className="py-24 bg-gray-50 dark:bg-[#060D1A]">
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="journey" className="py-16 sm:py-24 bg-gray-50 dark:bg-[#060D1A]">
+      <div className="max-w-5xl mx-auto px-5 sm:px-6 lg:px-8">
 
         {/* Header */}
         <motion.div
@@ -61,7 +61,7 @@ export default function Journey() {
           <span className="inline-block bg-[#FF9933]/10 border border-[#FF9933]/30 text-[#FF9933] text-xs font-bold font-[Poppins] tracking-widest uppercase px-5 py-2 rounded-full mb-4">
             Leadership Journey
           </span>
-          <h2 className="text-4xl lg:text-5xl font-black font-[Poppins] text-[#003366] dark:text-white">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black font-[Poppins] text-[#003366] dark:text-white">
             The{' '}
             <span className="bg-gradient-to-r from-[#FF9933] to-[#D4AF37] bg-clip-text text-transparent">
               Journey
